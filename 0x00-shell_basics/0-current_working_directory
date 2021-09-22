@@ -1,2 +1,2 @@
-#!/bin/bash realpath
-
+#!/bin/bash 
+pwd
