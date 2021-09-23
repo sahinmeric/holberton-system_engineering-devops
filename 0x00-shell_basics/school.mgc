@@ -1,2 +1,2 @@
-0 string =SCHOOL
-!:mime School1
+0 regex =SCHOOL
+!:mime School
