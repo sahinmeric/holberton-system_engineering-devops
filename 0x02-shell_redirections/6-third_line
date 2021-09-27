@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'print $3' iacta
+gawk 'print $3' iacta
