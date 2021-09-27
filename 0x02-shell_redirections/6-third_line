@@ -1,2 +1,2 @@
 #!/bin/bash
-gawk 'NR==3' iacta
+awk 'print $3' iacta
