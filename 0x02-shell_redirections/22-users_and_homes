@@ -1,2 +1,2 @@
 #!/bin/bash
-less /etc/passwd | sort
+cat /etc/passwd | sort
