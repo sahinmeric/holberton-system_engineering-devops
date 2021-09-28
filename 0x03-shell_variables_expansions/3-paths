@@ -1,2 +1,2 @@
 #!/bin/bash
-echo $PATH | ls | cut -d: -f22 --complement | wc -l
+echo $PATH | tr ":" "\n" | wc -l
