@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 # This Bash script that displays Best School 10 times.
 i=0
-while [ $i -lt 9 ]
+while [ $i -le 9 ]
 do
 echo "Best School"
 i=$(( i+1 ))
