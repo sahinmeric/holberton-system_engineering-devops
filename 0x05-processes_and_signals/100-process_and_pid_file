@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Creates the file /var/run/myscript.pid containing its PID
+echo $$ > /var/run/myscript.pid
+
+function sig_term {
+    echo "I hate the kill command"
+    rm /var/run/myscript.pid
+    exit
+}
+function sig_int {
+    echo "Y U no love me?!"
+}
+function sig_quit {
+    rm /var/run/myscript.pid
+    exit
+}
+
+trap sig_term SIGTERM
+trap sig_int SIGINT
+trap sig_quit SIGQUIT
+
+while true
+do
+    echo "To infinity and beyond"
+    sleep 2
+done
