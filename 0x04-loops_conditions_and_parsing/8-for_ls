@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+#This script displays the content of the current directory in a list format only showing the name of the file after the "-"
+
+for i in *
+do
+    echo "$i" | cut -d'-' -f2
+done
