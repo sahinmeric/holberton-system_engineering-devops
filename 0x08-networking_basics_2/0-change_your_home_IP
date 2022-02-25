@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# This script configures an Ubuntu server with the below requirements.
+cp /etc/hosts ~/hosts.new && printf "127.0.0.2 localhost\n8.8.8.8 facebook.com\n" > ~/hosts.new && cp -f ~/hosts.new /etc/hosts
