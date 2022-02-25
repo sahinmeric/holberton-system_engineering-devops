@@ -5,16 +5,29 @@ Simple socket server using threads
 
 import socket
 
-HOST = "localhost"  # Standard loopback interface address (localhost)
-PORT = 98  # Port to listen on (non-privileged ports are > 1023)
 
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
-    s.bind((HOST, PORT))
-    s.listen()
-    conn, addr = s.accept()
-    with conn:
-        while True:
-            data = conn.recv(1024)
-            if not data:
-                break
-            print(data)
+def server_program():
+    # get the hostname
+    host = "127.0.0.1"
+    port = 90  # initiate port no above 1024
+
+    server_socket = socket.socket()  # get instance
+    # look closely. The bind() function takes tuple as argument
+    server_socket.bind((host, port))  # bind host address and port together
+
+    # configure how many client the server can listen simultaneously
+    server_socket.listen(2)
+    conn, address = server_socket.accept()  # accept new connection
+    while True:
+        # receive data stream.it won't accept data packet greaterthan1024bytes
+        data = conn.recv(1024).decode()
+        if not data:
+            # if data is not received break
+            break
+        print(str(data), end="")
+
+    conn.close()  # close the connection
+
+
+if __name__ == '__main__':
+    server_program()
