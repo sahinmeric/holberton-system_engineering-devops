@@ -10,6 +10,8 @@
 * 1 database (MySQL)
 * 1 domain name foobar.com configured with a www record that points to your server IP 8.8.8.8
 
+![simple stack](0-simple_web_stack.jpg)
+
 ---
 
 ### 1-distributed_web_infrastructure 
