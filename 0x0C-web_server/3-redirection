@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# Configure a web server with nginx listening on port 80
+# and when queried on /redirect_me forwards to another webpage.
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+sudo ufw allow 'Nginx HTTP'
+sudo service nginx start
+chmod 777 /var/www/html/index.nginx-debian.html
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+sed -i '/listen 80 default_server/a rewrite ^/redirect_me smeric.tech permanent;' /etc/nginx/sites-available/default
+service nginx restart
