@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Configure a web server with nginx listening on port 80
+# and when queried on /redirect_me forwards to another webpage.
+
+echo "Ceci n'est pas une page" > /var/www/html/404.html
+
