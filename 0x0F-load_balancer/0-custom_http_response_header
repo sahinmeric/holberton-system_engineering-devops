@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+# Script that reconfigs Nginx server to have a 
+# custom 404 page that contains the string Ceci n'est pas une page.
+
+sudo apt-get -y update
+sudo apt-get -y upgrade
+sudo apt-get -y install nginx
+sudo service nginx start
+sudo chmod 777 /var/www/html/index.nginx-debian.html
+echo "Hello World" > /var/www/html/index.nginx-debian.html
+file="/etc/nginx/sites-available/default"
+config="location /redirect_me {\n return 301 https://www.youtube.com/watch?v=QH2-TGUlwu4;\n}\n"
+sudo sed -i "48i $config" "$file"
+
+custom404="/var/www/html/404.html"
+echo "Ceci n'est pas une page" | sudo tee $custom404
+file404="/etc/nginx/sites-available/default"
+config404="error_page 404 /404.html;\nlocation = /404.html {\n root /var/www/html;\n internal;\n}"
+sudo sed -i "52i $config404" "$file404"
+sudo service nginx restart
