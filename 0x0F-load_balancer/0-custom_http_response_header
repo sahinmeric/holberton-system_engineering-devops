@@ -7,7 +7,7 @@ sudo apt-get -y upgrade
 sudo apt-get -y install nginx
 sudo service nginx start
 sudo chmod 777 /var/www/html/index.nginx-debian.html
-echo "Holberton School" > /var/www/html/index.nginx-debian.html
+echo "Hello World" > /var/www/html/index.nginx-debian.html
 file="/etc/nginx/sites-available/default"
 config="add_header X-Served-By $HOSTNAME;\n"
 sudo sed -i "19i $config" "$file"
