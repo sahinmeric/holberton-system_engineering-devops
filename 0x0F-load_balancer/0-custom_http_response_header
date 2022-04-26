@@ -17,4 +17,7 @@ echo "Ceci n'est pas une page" | sudo tee $custom404
 file404="/etc/nginx/sites-available/default"
 config404="error_page 404 /404.html;\nlocation = /404.html {\n root /var/www/html;\n internal;\n}"
 sudo sed -i "52i $config404" "$file404"
+
+config="add_header X-Served-By $HOSTNAME;\n"
+sudo sed -i "19i $config" "$file"
 sudo service nginx restart
