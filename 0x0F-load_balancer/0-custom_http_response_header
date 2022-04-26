@@ -18,5 +18,5 @@ file404="/etc/nginx/sites-available/default"
 config404="error_page 404 /404.html;\nlocation = /404.html {\n root /var/www/html;\n internal;\n}"
 sudo sed -i "52i $config404" "$file404"
 
-sed -i "/listen 80 default_server/a add_header X-Served-By \"$HOSTNAME\";" /etc/nginx/nginx.conf
+echo "add_header X-Served-By '$HOSTNAME'" > "$file"
 sudo service nginx restart
