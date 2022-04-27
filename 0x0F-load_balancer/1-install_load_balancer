@@ -4,6 +4,7 @@
 sudo apt update
 sudo apt -y upgrade
 sudo apt-get -y install haproxy
+sudo chmod 777 /etc/haproxy/haproxy.cfg
 # make a backup of config file
 sudo cp /etc/haproxy/haproxy.cfg /etc/haproxy/haproxy.cfg.bk
 echo -e "frontend load_balancer\n\tbind *:80\n\toption forwardfor\n\tmode http\n\tdefault_backend web_servers\n" >> /etc/haproxy/haproxy.cfg
