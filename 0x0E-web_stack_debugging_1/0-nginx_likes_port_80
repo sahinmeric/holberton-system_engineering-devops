@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# Fix for nginx web server
+sudo service nginx restart
