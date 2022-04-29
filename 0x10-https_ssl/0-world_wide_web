@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This Bash script displays information about subdomains.
+if [ "$#" -eq 1 ]
+then
+    dig "$1"
+fi
