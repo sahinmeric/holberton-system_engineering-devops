@@ -1,0 +1,3 @@
+#!/usr/bin/env Bash
+# whoami
+sudo -u "$!" whoami
