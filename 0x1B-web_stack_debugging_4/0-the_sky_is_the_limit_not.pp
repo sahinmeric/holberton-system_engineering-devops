@@ -1,8 +1,8 @@
 # Increases the open file limit for nginx
 
 exec { 'Increase limit':
-    command  => 'sed -i "s/-n 15/ -n 50000/g" /etc/default/nginx',
-    provider => 'shell'
+    command  => 'sed -i 's/15/4096/' /etc/default/nginx',
+    provider => 'shell',
 }
 
 exec { 'Restart nginx':
