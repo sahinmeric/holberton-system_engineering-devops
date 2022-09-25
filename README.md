@@ -12,7 +12,7 @@ Directories | Description
 [0x00-shell_basics](./0x00-shell_basics) | Introduction to the basics of the Linux Shell
 [0x01-shell_permissions](./0x01-shell_permissions) | Introduction to Shell permissions and the file system
 [0x02-shell_redirections](./0x02-shell_redirections) | Introduction to Shell redirections
-[0x03-shell_variables_expansions](./0x03-shell_variables_expansion) | Introduction to Shell variable expansions
+[0x03-shell_variables_expansions](./0x03-shell_variables_expansions) | Introduction to Shell variable expansions
 [0x04-loops_conditions_and_parsing](./0x04-loops_conditions_and_parsing) | Introduction to Bash scripting with loops and conditions
 [0x05-processes_and_signals](./0x05-processes_and_signals) | Introduction to processes and signals in the Shell
 [0x06-regular_expressions](./0x06-regular_expressions) | Introduction to regular expressions in Ruby
@@ -26,12 +26,14 @@ Directories | Description
 [0x0E-web_stack_debugging_1](./0x0E-web_stack_debugging_1) | Advanced web stack debugging
 [0x0F-load_balancer](./0x0F-load_balancer) | Introduction to load-balancing and installing HAProxy on our own servers
 [0x10-https_ssl](./0x10-https_ssl) | Introduction to HTTPS, SSL and getting our own SSL certificate for our servers
-[0x11-what_happens_when_your_type_holbertonschool_com_in_your_browser_and_press_enter](./0x11-what_happens_when_your_type_holbertonschool_com_in_your_browser_and_press_enter) | Blog post explaining a web infrastructure
 [0x12-web_stack_debugging_2](./0x12-web_stack_debugging_2) | More advanced web stack debugging
 [0x13-firewall](./0x13-firewall) | Introduction to firewalls and setting up of a firewall on our own servers
 [0x14-mysql](./0x14-mysql) | Introduction to Database clusters and setting up a Primary-Replica MySQL cluster on our own servers
 [0x15-api](./0x15-api) | Querying an API and exporting data to JSON or CSV format
-[0x16-api_advanced](./0x16-api_advanced) | Advanced API queries, recursive requests
+[0x17-web_stack_debugging_3](./0x17-web_stack_debugging_3) | Web stack debugging
+[0x1A-application_server](./0x1A-application_server) | Nginx configuration
+[0x1B-web_stack_debugging_4](./0x1B-web_stack_debugging_4) | Debugging the reasong of huge amount of failed requests.
+[attack_is_the_best_defense](./attack_is_the_best_defense) | Sniffing and dictionary attack exercises answers
 
 ## Author
 
